@@ -46,12 +46,18 @@
 			
 			<ReferencePath>../bin/</ReferencePath>
 			
-			<Reference name="ICSharpCode.SharpZipLib" path="../bin/" />
 			<Reference name="log4net" path="../bin/" />
+			<Reference name="Pngcs" path="../bin/" />
+			<Reference name="ICSharpCode.SharpZipLib" path="../bin/" />
+			
+			<!-- MonoGame -->
 			<Reference name="MonoGame.Framework" path="../bin/" />
 			<Reference name="OpenTK" path="../bin/" />
-			<Reference name="Pngcs" path="../bin/" />
 			<Reference name="Tao.Sdl" path="../bin/" />
+			
+			<!-- Irony parsing framework. -->
+			<Reference name="Irony" path="../bin/" />
+			<Reference name="Irony.Interpreter" path="../bin/" />
 			
 			<Reference name="System" />
 			<Reference name="System.Core" />
@@ -62,7 +68,6 @@
 				<Match pattern="*.cs" recurse="true"/>
 			</Files>
 		</Project>
-		
 		
 		<Project frameworkVersion="v4_0" name="OpenBYONDClient" path="OpenBYONDClient" type="WinExe" rootNamespace="OpenBYOND.Client">
 			<Configuration name="Debug">
@@ -78,13 +83,64 @@
 			
 			<ReferencePath>../bin/</ReferencePath>
 			
-			<Reference name="ICSharpCode.SharpZipLib" path="../bin/" />
+			<Reference name="LibOpenBYOND" path="../bin/" />
+			
 			<Reference name="log4net" path="../bin/" />
+			<Reference name="Pngcs" path="../bin/" />
+			<Reference name="ICSharpCode.SharpZipLib" path="../bin/" />
+			
+			<!-- MonoGame -->
 			<Reference name="MonoGame.Framework" path="../bin/" />
 			<Reference name="OpenTK" path="../bin/" />
-			<Reference name="Pngcs" path="../bin/" />
 			<Reference name="Tao.Sdl" path="../bin/" />
+			
+			<!-- Irony parsing framework. -->
+			<!--
+			<Reference name="Irony" path="../bin/" />
+			<Reference name="Irony.Interpreter" path="../bin/" />
+			-->
+			
+			<Reference name="System" />
+			<Reference name="System.Core" />
+			<Reference name="System.Xml" />
+			<Reference name="System.Xml.Linq" />
+			
+			<Files>
+				<Match pattern="*.cs" recurse="true"/>
+			</Files>
+		</Project>
+		
+		<Project frameworkVersion="v4_0" name="OpenBYOND.Test" path="OpenBYOND.Test" type="Library" rootNamespace="OpenBYOND.Test">
+			<Configuration name="Debug">
+				<Options>
+					<OutputPath>../bin/</OutputPath>
+				</Options>
+			</Configuration>
+			<Configuration name="Release">
+				<Options>
+					<OutputPath>../bin/</OutputPath>
+				</Options>
+			</Configuration>
+			
+			<ReferencePath>../bin/</ReferencePath>
+			
 			<Reference name="LibOpenBYOND" path="../bin/" />
+			
+			<Reference name="log4net" path="../bin/" />
+			<Reference name="Pngcs" path="../bin/" />
+			<Reference name="ICSharpCode.SharpZipLib" path="../bin/" />
+			
+			<!-- MonoGame -->
+			<Reference name="MonoGame.Framework" path="../bin/" />
+			<Reference name="OpenTK" path="../bin/" />
+			<Reference name="Tao.Sdl" path="../bin/" />
+			
+			<!-- Irony parsing framework. -->
+			<Reference name="Irony" path="../bin/" />
+			<Reference name="Irony.Interpreter" path="../bin/" />
+
+			<!-- Unit Testing. -->
+			<Reference name="nunit.framework" path="../bin/nunit/" />
 			
 			<Reference name="System" />
 			<Reference name="System.Core" />
