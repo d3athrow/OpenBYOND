@@ -14,6 +14,26 @@ namespace OpenBYOND.World
         public List<Atom> Atoms = new List<Atom>();
 
         public string origID;
-        public int ID = -1;
+
+        public Location loc;
+
+        internal Tile(uint x, uint y, uint z)
+        {
+            loc = new Location(x, y, z, this);
+        }
+
+        public Tile()
+        {
+            // TODO: Complete member initialization
+        }
+
+        internal Tile CopyNew(uint x, uint y, uint z)
+        {
+            Tile t = new Tile(x,y,z);
+            t.Atoms = this.Atoms.Select((Atom a) => {
+                return a.Clone();
+            }).ToList();
+            return t;
+        }
     }
 }
